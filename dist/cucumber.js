@@ -59497,7 +59497,7 @@ module.exports={
     "gherkin",
     "tests"
   ],
-  "version": "5.1.0",
+  "version": "5.1.1",
   "homepage": "http://github.com/cucumber/cucumber-js",
   "author": "Julien Biezemans <jb@jbpros.com> (http://jbpros.net)",
   "contributors": [
@@ -66077,7 +66077,7 @@ function wrapDefinitions(_ref) {
   if (definitionFunctionWrapper) {
     definitions.forEach(function (definition) {
       var codeLength = definition.code.length;
-      var wrappedFn = definitionFunctionWrapper(definition.code, definition.options.wrapperOptions);
+      var wrappedFn = definitionFunctionWrapper(definition.code, definition.options.wrapperOptions, definition.pattern);
 
       if (wrappedFn !== definition.code) {
         definition.code = (0, _utilArity.default)(codeLength, wrappedFn);
